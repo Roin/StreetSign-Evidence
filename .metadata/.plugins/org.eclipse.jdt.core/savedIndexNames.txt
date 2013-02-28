@@ -12,5 +12,4 @@ INDEX VERSION 1.126+D:\Users\Watnuss\Documents\GitHub\StreetSign-Evidence\.metad
 305854171.index
 4155206848.index
 1498219845.index
-320488198.index
 4041092966.index
