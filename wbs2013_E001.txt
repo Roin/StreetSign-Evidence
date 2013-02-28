@@ -1,0 +1,36 @@
+E003
+----
+
+Formprimitive / für jedes gibt ein Klassifikator eine Zuordnung aus, wenn diese < 0,1 ist wird es nicht aufgeführt.
+
+
+kr - Kreis
+ks - Kreissegment
+re - Rechteck
+ra - Raute
+de - Dreieck
+
+Pro Bild bis zu 16 Primitive (x1-x16) in folgender Form:
+
+"Typ;Bildobjekt;Zuverlässigkeit"
+
+"kr;x1;0.4"
+"kr;x4;0.55"
+"kr;x7;0.61"
+"ks;x1;0.22"
+"re;x9;0.29"
+"re;x11;0.39"
+"ra;x12;0.56"
+"ra;x15;0.8"
+"ra;x10;0.46"
+"de;x15;0.22"
+"de;x13;0.49"
+"de;x2;0.55"
+...
+
+Relationen:
+
+"inside;x1;x4"
+"inside;x15;x13"
+"inside;x7;x4"
+...
