@@ -1,0 +1,16 @@
+kr,x1,0.4
+kr,x4,0.55
+kr,x7,0.61
+ks,x1,0.22
+re,x9,0.29
+re,x11,0.39
+ra,x12,0.56
+ra,x15,0.8
+ra,x10,0.46
+de,x15,0.22
+de,x13,0.49
+de,x2,0.55
+;
+inside,x1,x4
+inside,x15,x13
+inside,x7,x4

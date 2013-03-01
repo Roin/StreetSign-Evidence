@@ -1,39 +1,34 @@
 package model;
 
+import java.util.HashMap;
+
 public class Primitive {
 
-	private String type;
-
-	private int location;
-
-	private double reliability;
+	private int id;
+	// String: Type
+	// Double: Reliability
+	private HashMap<String, Double> map;
 
 	public Primitive() {
-
+		map = new HashMap<String, Double>();
 	}
 
-	public String getType() {
-		return type;
+	public int getId() {
+		return id;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public int getLocation() {
-		return location;
+	public HashMap<String, Double> getMap() {
+		return map;
 	}
 
-	public void setLocation(int location) {
-		this.location = location;
+	public void setMap(HashMap<String, Double> map) {
+		this.map = map;
 	}
 
-	public double getReliability() {
-		return reliability;
-	}
 
-	public void setReliability(double reliability) {
-		this.reliability = reliability;
-	}
 
 }
