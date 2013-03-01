@@ -27,7 +27,6 @@ public class CSVParser {
 		relations = new ArrayList<Relation>();
 
 		file = new File(filepath);
-		parse();
 	}
 
 	public void parse() {
@@ -73,7 +72,6 @@ public class CSVParser {
 			
 			relations.add(tmpRel);
 		}
-
 	}
 
 	private static String getFileContents(File file) {
@@ -104,4 +102,7 @@ public class CSVParser {
 
 	}
 
+	public ArrayList<Relation> getRelations() {
+		return relations;
+	}
 }

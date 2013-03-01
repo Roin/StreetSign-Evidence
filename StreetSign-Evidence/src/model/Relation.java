@@ -1,9 +1,18 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Relation {
 	private String type;
 	private Primitive prim1;
 	private Primitive prim2;
+	
+	private ArrayList<Solution> solutions;
+	
+	public void calculateEvidence()
+	{
+		
+	}
 
 	public String getType() {
 		return type;
