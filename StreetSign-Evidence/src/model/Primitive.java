@@ -25,8 +25,13 @@ public class Primitive {
 		return map;
 	}
 
-	public void setMap(HashMap<String, Double> map) {
-		this.map = map;
+	public void addToMap(String type, Double reliability) {
+		map.put(type, reliability);
+	}
+	
+	public String toString()
+	{
+		return "{Primitive " + id + ": " + map + "}";
 	}
 
 

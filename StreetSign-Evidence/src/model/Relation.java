@@ -28,5 +28,10 @@ public class Relation {
 	public void setPrim2(Primitive prim2) {
 		this.prim2 = prim2;
 	}
+	
+	public String toString()
+	{
+		return "{Relation " + type + ": " + prim1 + " " +  prim2 + "}";
+	}
 
 }

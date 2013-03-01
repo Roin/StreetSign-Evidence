@@ -9,6 +9,8 @@ import java.nio.CharBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.ListIterator;
 
 import model.Primitive;
 import model.Relation;
@@ -17,51 +19,60 @@ public class CSVParser {
 
 	private File file;
 
-	private String[] primString;
-	private String[] relString;
-	private ArrayList<Primitive> primitives;
+	private HashMap<Integer, Primitive> primitives;
 	private ArrayList<Relation> relations;
 
 	public CSVParser(String filepath) {
-		primitives = new ArrayList<Primitive>();
+		primitives = new HashMap<Integer, Primitive>();
 		relations = new ArrayList<Relation>();
-		
+
 		file = new File(filepath);
-		splitRegions();
 		parse();
 	}
 
 	public void parse() {
 		Primitive tmpPrim;
 		Relation tmpRel;
-		// Parse primitives
-		for(String prim: primString)
-		{
-			String data[] = prim.trim().split(",");
-			System.out.println(data[1]);
-			
 
-		}
-		
-		for(String rel: relString)
-		{
-			
-		}
-
-	}
-
-	// Teilt in prmitives und relations auf
-	private void splitRegions() {
+		// Teilt das file in primitives und relations auf
 		String fileData = getFileContents(file);
-
 		String[] regions = fileData.split(";");
-		primString = regions[0].trim().split("\n");
-		relString = regions[1].trim().split("\n");
+		String[] primString = regions[0].trim().split("\n");
+		String[] relString = regions[1].trim().split("\n");
+
+		// Parse primitives
+		for (String prim : primString) {
+			String data[] = prim.trim().split(",");
+			int id = new Integer(data[1].split("x")[1]);
+			
+			// Does this Primitive already exist?
+			if (primitives.containsKey(id)) {
+				// Yes: Add to existing Primitive
+				primitives.get(id).addToMap(data[0].trim(), Double.parseDouble(data[2].trim()));
+			} else {
+				// No: Create to new Primitive
+				tmpPrim = new Primitive();
+				tmpPrim.setId(id);
+				tmpPrim.addToMap(data[0].trim(), Double.parseDouble(data[2]));
+				primitives.put(id, tmpPrim);
+			}
+		}
 		
 
-
-		// System.out.println("Primitives: \n" + primitives + "\nRelations: \n"
-		// + relations);
+		// Parse relations
+		for (String rel : relString) {
+			String data[] = rel.trim().split(",");
+			tmpRel = new Relation();
+			tmpRel.setType(data[0].trim());
+			
+			int idPrim1 = new Integer(data[1].split("x")[1]);
+			int idPrim2 = new Integer(data[2].split("x")[1]);
+			
+			tmpRel.setPrim1(primitives.get(idPrim1));
+			tmpRel.setPrim2(primitives.get(idPrim2));
+			
+			relations.add(tmpRel);
+		}
 
 	}
 
