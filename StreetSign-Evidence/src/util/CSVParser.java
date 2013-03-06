@@ -10,7 +10,6 @@ import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.ListIterator;
 
 import model.Primitive;
 import model.Relation;
@@ -49,7 +48,7 @@ public class CSVParser {
 				// Yes: Add to existing Primitive
 				primitives.get(id).addToMap(data[0].trim(), Double.parseDouble(data[2].trim()));
 			} else {
-				// No: Create to new Primitive
+				// No: Create and add to new Primitive
 				tmpPrim = new Primitive();
 				tmpPrim.setId(id);
 				tmpPrim.addToMap(data[0].trim(), Double.parseDouble(data[2]));

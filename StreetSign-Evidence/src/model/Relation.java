@@ -1,17 +1,44 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class Relation {
 	private String type;
 	private Primitive prim1;
 	private Primitive prim2;
-	
+
 	private ArrayList<Solution> solutions;
-	
-	public void calculateEvidence()
-	{
-		
+
+	public Relation() {
+		solutions = new ArrayList<Solution>();
+	}
+
+	public void calculateEvidence() {
+		Iterator<Entry<String, Double>> it1 = prim1.getIterator();
+		Iterator<Entry<String, Double>> it2 = prim2.getIterator();
+
+		Map.Entry<String, Double> pair1;
+		Map.Entry<String, Double> pair2;
+		while (it1.hasNext()) {
+			pair1 = (Map.Entry<String, Double>) it1.next();
+
+			while (it2.hasNext()) {
+				pair2 = (Map.Entry<String, Double>) it2.next();
+				solutions.add(new Solution(4, pair1.getKey(), pair2.getKey(),
+						pair1.getValue(), pair2.getValue()));
+
+			}
+
+			// "Reset" the inner iterator it2
+			it2 = prim2.getIterator();
+		}
+	}
+
+	public ArrayList<Solution> getSolutions() {
+		return solutions;
 	}
 
 	public String getType() {
@@ -37,10 +64,9 @@ public class Relation {
 	public void setPrim2(Primitive prim2) {
 		this.prim2 = prim2;
 	}
-	
-	public String toString()
-	{
-		return "{Relation " + type + ": " + prim1 + " " +  prim2 + "}";
+
+	public String toString() {
+		return "{Relation " + type + ": " + prim1 + " " + prim2 + "}";
 	}
 
 }

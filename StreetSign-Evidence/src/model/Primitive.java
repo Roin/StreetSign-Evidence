@@ -1,6 +1,8 @@
 package model;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
 
 public class Primitive {
 
@@ -28,12 +30,13 @@ public class Primitive {
 	public void addToMap(String type, Double reliability) {
 		map.put(type, reliability);
 	}
-	
-	public String toString()
-	{
-		return "{Primitive " + id + ": " + map + "}";
+
+	public Iterator<Entry<String, Double>> getIterator() {
+		return map.entrySet().iterator();
 	}
 
-
+	public String toString() {
+		return "{Primitive " + id + ": " + map + "}";
+	}
 
 }
