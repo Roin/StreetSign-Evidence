@@ -38,9 +38,9 @@ public class Primitive {
 		else
 			System.err.println("No Element in the Hashmap!");
 		
-		System.out.println(evTable);
-		for(Cell cell: evTable)
-			System.out.println("	" +cell.getProbability() + " " + cell.getIntersectionAsString());
+//		System.out.println(evTable);
+//		for(Cell cell: evTable)
+//			System.out.println("	" +cell.getProbability() + " " + cell.getIntersectionAsString());
 
 	}
 
@@ -66,6 +66,10 @@ public class Primitive {
 
 	public Iterator<Entry<String, Double>> getIterator() {
 		return map.entrySet().iterator();
+	}
+
+	public Cell[] getEvTable() {
+		return evTable;
 	}
 
 	public String toString() {

@@ -17,13 +17,25 @@ public class Solution {
 		table = new Cell[dim];
 	}
 
-	public Solution(int dim, String[] set1, String[] set2, double[] probs1,
-			double[] probs2) {
-		table = new Cell[dim];
-		this.set1 = set1;
-		this.set2 = set2;
-		this.probs1 = probs1;
-		this.probs2 = probs2;
+	public Solution(Cell[] t1, Cell[] t2) {
+
+		table = new Cell[t1.length * t2.length];
+		
+		set1 = new String[t1.length];
+		set2 = new String[t2.length];
+		probs1 = new double[t1.length];
+		probs2 = new double[t2.length];
+
+		for (int i = 0; i < t1.length; i++) {
+			set1[i] = t1[i].getIntersectionAsString();
+			probs1[i] = t1[i].getProbability();
+		}
+
+		for (int i = 0; i < t2.length; i++) {
+			set2[i] = t2[i].getIntersectionAsString();
+			probs2[i] = t2[i].getProbability();
+		}
+
 		calculateTable();
 	}
 
@@ -64,6 +76,8 @@ public class Solution {
 					table[dim].addIntersection(set2[j]);
 				else if (set2[j].equalsIgnoreCase("omega"))
 					table[dim].addIntersection(set1[i]);
+				else
+					table[dim].addIntersection(" ");
 
 				table[dim].setProbability(probs1[i] * probs2[j]);
 				dim++;
@@ -74,14 +88,13 @@ public class Solution {
 		calcNewProbs();
 
 	}
-	
-	private void calcNewProbs()
-	{
-		for(Cell cell : table)
-			if(cell.getIntersectionAsString().equalsIgnoreCase(" "))
+
+	private void calcNewProbs() {
+		for (Cell cell : table)
+			if (cell.getIntersectionAsString().equalsIgnoreCase(" "))
 				cell.setProbability(0.0);
 			else
-				cell.setProbability(cell.getProbability()*k);
+				cell.setProbability(cell.getProbability() * k);
 	}
 
 	private double determineK() {
@@ -103,19 +116,28 @@ public class Solution {
 	public Cell[] getSolution() {
 		return table;
 	}
+	
+	public double getPlausibility(String type)
+	{
+		double pl = 0.0;
+		
+		for(Cell cell : table)
+		{
+			if(cell.getIntersectionAsString().equalsIgnoreCase(type) || cell.getIntersectionAsString().equalsIgnoreCase("omega"))
+				pl += cell.getProbability();
+		}
+		
+		return pl;
+	}
 
-	// public String toString() {
-	// StringBuilder sb = new StringBuilder();
-	// sb.append("Table: (correction factor: " + k + ")\n");
-	// sb.append("Left Top: {" + table[0].getIntersectionAsString() + "} / "
-	// + table[0].getProbability() + "\n");
-	// sb.append("Right Top: {" + table[1].getIntersectionAsString() + "} / "
-	// + table[1].getProbability() + "\n");
-	// sb.append("Left Bottom: {" + table[2].getIntersectionAsString()
-	// + "} / " + table[2].getProbability() + "\n");
-	// sb.append("Right Bottom: {" + table[3].getIntersectionAsString()
-	// + "} / " + table[3].getProbability() + "\n");
-	// return sb.toString();
-	// }
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Table: \n");
+		for(Cell cell: table)
+			sb.append(cell.toString() + "\n");
+		
+		return sb.toString();
+	}
 
 }

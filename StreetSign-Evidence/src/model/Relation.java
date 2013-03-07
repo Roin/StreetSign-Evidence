@@ -1,53 +1,29 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
-
 public class Relation {
+	private final String[] primTypes = { "kr", "ks", "de", "ra", "re" };
+
 	private String type;
 	private Primitive prim1;
 	private Primitive prim2;
 
-	private ArrayList<Solution> solutions;
+	private Solution solution;
 
 	public Relation() {
-		solutions = new ArrayList<Solution>();
 	}
 
 	public void calculateEvidence() {
-		
 		prim1.calcEvidence();
 		prim2.calcEvidence();
-		
-		System.out.println(prim1);
-		System.out.println(prim2);
-		
-		
-		
-//		Iterator<Entry<String, Double>> it1 = prim1.getIterator();
-//		Iterator<Entry<String, Double>> it2 = prim2.getIterator();
-//
-//		Map.Entry<String, Double> pair1;
-//		Map.Entry<String, Double> pair2;
-//		while (it1.hasNext()) {
-//			pair1 = (Map.Entry<String, Double>) it1.next();
-//
-//			while (it2.hasNext()) {
-//				pair2 = (Map.Entry<String, Double>) it2.next();
-//				solutions.add(new Solution(4, pair1.getKey(), pair2.getKey(),
-//						pair1.getValue(), pair2.getValue()));
-//
-//			}
-//
-//			// "Reset" the inner iterator it2
-//			it2 = prim2.getIterator();
-//		}
+
+		solution = new Solution(prim1.getEvTable(), prim2.getEvTable());
+		// System.out.println("Relation Solution:" + type + " "+prim1.getId()
+		// +","+ prim2.getId());
+		// System.out.println(solution);
 	}
 
-	public ArrayList<Solution> getSolutions() {
-		return solutions;
+	public Solution getSolution() {
+		return solution;
 	}
 
 	public String getType() {
@@ -76,6 +52,47 @@ public class Relation {
 
 	public String toString() {
 		return "{Relation " + type + ": " + prim1 + " " + prim2 + "}";
+	}
+
+	public Sign generateSign() {
+		if (type.equalsIgnoreCase("inside")) {
+			String signType;
+			String maxType = "unkown";
+			double maxValue = 0.0;
+
+			for (String type : primTypes) {
+				double pl = solution.getPlausibility(type);
+				if (pl > maxValue) {
+					maxValue = pl;
+					maxType = type;
+				}
+			}
+
+			switch (maxType) {
+
+			case "kr":
+				signType = "Verbotsschild";
+				break;
+
+			case "ra":
+				signType = "Vorfahrtsschild";
+				break;
+
+			case "de":
+				signType = "Achtungsschild";
+				break;
+
+			case "re":
+			case "ks":
+			default:
+				signType = "Unbekanntes Schild";
+				break;
+
+			}
+
+			return new Sign(this, signType, maxValue);
+		} else
+			return null;
 	}
 
 }
