@@ -41,7 +41,7 @@ public class CSVParser {
 		// Parse primitives
 		for (String prim : primString) {
 			String data[] = prim.trim().split(",");
-			int id = new Integer(data[1].split("x")[1]);
+			int id = new Integer(data[1]);
 			
 			// Does this Primitive already exist?
 			if (primitives.containsKey(id)) {
@@ -63,8 +63,8 @@ public class CSVParser {
 			tmpRel = new Relation();
 			tmpRel.setType(data[0].trim());
 			
-			int idPrim1 = new Integer(data[1].split("x")[1]);
-			int idPrim2 = new Integer(data[2].split("x")[1]);
+			int idPrim1 = new Integer(data[1]);
+			int idPrim2 = new Integer(data[2]);
 			
 			tmpRel.setPrim1(primitives.get(idPrim1));
 			tmpRel.setPrim2(primitives.get(idPrim2));

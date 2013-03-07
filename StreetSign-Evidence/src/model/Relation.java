@@ -17,24 +17,33 @@ public class Relation {
 	}
 
 	public void calculateEvidence() {
-		Iterator<Entry<String, Double>> it1 = prim1.getIterator();
-		Iterator<Entry<String, Double>> it2 = prim2.getIterator();
-
-		Map.Entry<String, Double> pair1;
-		Map.Entry<String, Double> pair2;
-		while (it1.hasNext()) {
-			pair1 = (Map.Entry<String, Double>) it1.next();
-
-			while (it2.hasNext()) {
-				pair2 = (Map.Entry<String, Double>) it2.next();
-				solutions.add(new Solution(4, pair1.getKey(), pair2.getKey(),
-						pair1.getValue(), pair2.getValue()));
-
-			}
-
-			// "Reset" the inner iterator it2
-			it2 = prim2.getIterator();
-		}
+		
+		prim1.calcEvidence();
+		prim2.calcEvidence();
+		
+		System.out.println(prim1);
+		System.out.println(prim2);
+		
+		
+		
+//		Iterator<Entry<String, Double>> it1 = prim1.getIterator();
+//		Iterator<Entry<String, Double>> it2 = prim2.getIterator();
+//
+//		Map.Entry<String, Double> pair1;
+//		Map.Entry<String, Double> pair2;
+//		while (it1.hasNext()) {
+//			pair1 = (Map.Entry<String, Double>) it1.next();
+//
+//			while (it2.hasNext()) {
+//				pair2 = (Map.Entry<String, Double>) it2.next();
+//				solutions.add(new Solution(4, pair1.getKey(), pair2.getKey(),
+//						pair1.getValue(), pair2.getValue()));
+//
+//			}
+//
+//			// "Reset" the inner iterator it2
+//			it2 = prim2.getIterator();
+//		}
 	}
 
 	public ArrayList<Solution> getSolutions() {

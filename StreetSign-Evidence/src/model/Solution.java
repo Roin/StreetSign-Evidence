@@ -1,11 +1,13 @@
 package model;
 
+import java.util.Map;
+
 public class Solution {
 
-	private String type1;
-	private String type2;
-	private double prob1;
-	private double prob2;
+	private String[] set1;
+	private String[] set2;
+	private double[] probs1;
+	private double[] probs2;
 	// Korrekturfaktor
 	private double k;
 
@@ -15,12 +17,34 @@ public class Solution {
 		table = new Cell[dim];
 	}
 
-	public Solution(int dim, String type1, String type2, double prob1, double prob2) {
+	public Solution(int dim, String[] set1, String[] set2, double[] probs1,
+			double[] probs2) {
 		table = new Cell[dim];
-		this.type1 = type1;
-		this.type2 = type2;
-		this.prob1 = prob1;
-		this.prob2 = prob2;
+		this.set1 = set1;
+		this.set2 = set2;
+		this.probs1 = probs1;
+		this.probs2 = probs2;
+		calculateTable();
+	}
+
+	public Solution(Cell[] oldTable, Map.Entry<String, Double> pair) {
+		table = new Cell[oldTable.length * 2];
+		set1 = new String[oldTable.length];
+		set2 = new String[2];
+		probs1 = new double[oldTable.length];
+		probs2 = new double[2];
+
+		set2[0] = pair.getKey();
+		set2[1] = "omega";
+
+		probs2[0] = pair.getValue();
+		probs2[1] = 1 - pair.getValue();
+
+		for (int i = 0; i < oldTable.length; i++) {
+			set1[i] = oldTable[i].getIntersectionAsString();
+			probs1[i] = oldTable[i].getProbability();
+		}
+
 		calculateTable();
 	}
 
@@ -28,56 +52,70 @@ public class Solution {
 		// TODO Tabelle füllen und Wahrscheinlichkeiten berechnen (mit
 		// Korrekturfaktor!)
 
-		determineK();
+		// Location in Solution table
+		int dim = 0;
 
-		// IS type 1 and type 2 --> top left
-		table[0] = new Cell();
-		if (type1.equalsIgnoreCase(type2)) {
-			table[0].addIntersection(type1);
-			table[0].setProbability(prob1 * prob2 * k);
-		} else {
+		for (int i = 0; i < set1.length; i++) {
+			for (int j = 0; j < set2.length; j++) {
+				table[dim] = new Cell();
+				if (set1[i].equalsIgnoreCase(set2[j]))
+					table[dim].addIntersection(set1[i]);
+				else if (set1[i].equalsIgnoreCase("omega"))
+					table[dim].addIntersection(set2[j]);
+				else if (set2[j].equalsIgnoreCase("omega"))
+					table[dim].addIntersection(set1[i]);
 
-			table[0].setProbability(0);
+				table[dim].setProbability(probs1[i] * probs2[j]);
+				dim++;
+			}
 		}
 
-		// IS type 1 and Omega2 --> top right
-		table[1] = new Cell();
-		table[1].addIntersection(type1);
-		table[1].setProbability(prob1 * (1 - prob2) * k);
+		determineK();
+		calcNewProbs();
 
-		// IS Omega1 and type 2 --> bottom left
-		table[2] = new Cell();
-		table[2].addIntersection(type2);
-		table[2].setProbability((1 - prob1) * prob2 * k);
-
-		// IS Omega1 and Omega2 --> bottom right
-		table[3] = new Cell();
-		table[3].addIntersection("omega");
-		table[3].setProbability((1 - prob1) * (1 - prob2) * k);
-
+	}
+	
+	private void calcNewProbs()
+	{
+		for(Cell cell : table)
+			if(cell.getIntersectionAsString().equalsIgnoreCase(" "))
+				cell.setProbability(0.0);
+			else
+				cell.setProbability(cell.getProbability()*k);
 	}
 
 	private double determineK() {
-		if (type1.equalsIgnoreCase(type2))
-			k = 1;
-		else
-			k = 1 / (1 - (prob1 * prob2));
+		double conflict = 0.0;
+
+		for (Cell cell : table)
+			if (cell.getIntersectionAsString().equalsIgnoreCase(" "))
+				conflict += cell.getProbability();
+
+		k = 1 / (1 - conflict);
 
 		return k;
 	}
 
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("Table: (correction factor: " + k + ")\n");
-		sb.append("Left Top: {" + table[0].getIntersectionAsString() + "} / "
-				+ table[0].getProbability() + "\n");
-		sb.append("Right Top: {" + table[1].getIntersectionAsString() + "} / "
-				+ table[1].getProbability() + "\n");
-		sb.append("Left Bottom: {" + table[2].getIntersectionAsString()
-				+ "} / " + table[2].getProbability() + "\n");
-		sb.append("Right Bottom: {" + table[3].getIntersectionAsString()
-				+ "} / " + table[3].getProbability() + "\n");
-		return sb.toString();
+	public double getK() {
+		return k;
 	}
+
+	public Cell[] getSolution() {
+		return table;
+	}
+
+	// public String toString() {
+	// StringBuilder sb = new StringBuilder();
+	// sb.append("Table: (correction factor: " + k + ")\n");
+	// sb.append("Left Top: {" + table[0].getIntersectionAsString() + "} / "
+	// + table[0].getProbability() + "\n");
+	// sb.append("Right Top: {" + table[1].getIntersectionAsString() + "} / "
+	// + table[1].getProbability() + "\n");
+	// sb.append("Left Bottom: {" + table[2].getIntersectionAsString()
+	// + "} / " + table[2].getProbability() + "\n");
+	// sb.append("Right Bottom: {" + table[3].getIntersectionAsString()
+	// + "} / " + table[3].getProbability() + "\n");
+	// return sb.toString();
+	// }
 
 }
