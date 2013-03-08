@@ -12,7 +12,7 @@ public class Anwendung {
 	
 	public static void main(String[] args) {
 		System.out.println("Start ...");
-		CSVParser parser = new CSVParser("../testdata3.csv");
+		CSVParser parser = new CSVParser("../testdata2.csv");
 		parser.parse();
 
 		for (Relation rel : parser.getRelations()) {

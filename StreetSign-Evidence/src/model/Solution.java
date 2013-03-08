@@ -20,7 +20,7 @@ public class Solution {
 	public Solution(Cell[] t1, Cell[] t2) {
 
 		table = new Cell[t1.length * t2.length];
-		
+
 		set1 = new String[t1.length];
 		set2 = new String[t2.length];
 		probs1 = new double[t1.length];
@@ -116,27 +116,37 @@ public class Solution {
 	public Cell[] getSolution() {
 		return table;
 	}
-	
-	public double getPlausibility(String type)
-	{
+
+	public double getPlausibility(String type) {
 		double pl = 0.0;
-		
-		for(Cell cell : table)
-		{
-			if(cell.getIntersectionAsString().equalsIgnoreCase(type) || cell.getIntersectionAsString().equalsIgnoreCase("omega"))
+
+		for (Cell cell : table) {
+			if (cell.getIntersectionAsString().equalsIgnoreCase(type)
+					|| cell.getIntersectionAsString().equalsIgnoreCase("omega"))
 				pl += cell.getProbability();
 		}
-		
+
 		return pl;
+	}
+
+	public double getBelief(String type) {
+		double belief = 0.0;
+
+		for (Cell cell : table) {
+			if (cell.getIntersectionAsString().equalsIgnoreCase(type))
+				belief += cell.getProbability();
+		}
+
+		return belief;
 	}
 
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		
+
 		sb.append("Table: \n");
-		for(Cell cell: table)
+		for (Cell cell : table)
 			sb.append(cell.toString() + "\n");
-		
+
 		return sb.toString();
 	}
 

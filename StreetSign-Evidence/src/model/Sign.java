@@ -6,12 +6,14 @@ public class Sign {
 	private Sign ontopof;
 	private String signType;
 	private double plausibility;
+	private double belief;
 	
-	public Sign(Relation rel, String signType, double plausibility)
+	public Sign(Relation rel, String signType, double belief, double plausibility)
 	{
 		this.rel = rel;
 		this.signType = signType;
 		this.plausibility = plausibility;
+		this.belief = belief;
 	}
 	
 	public Relation getRel() {
@@ -39,11 +41,20 @@ public class Sign {
 		this.plausibility = plausibility;
 	}
 	
+	public double getBelief() {
+		return belief;
+	}
+
+	public void setBelief(double belief) {
+		this.belief = belief;
+	}
+
 	public String toString()
 	{
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append("Schildtyp: " + signType + ".\n");
+		sb.append("Glaube: " + belief + ".\n");
 		sb.append("Plausibilität: " + plausibility + ".\n");
 		sb.append("prim1: " + rel.getPrim1().getId() + "\nprim2: " + rel.getPrim2().getId());
 		

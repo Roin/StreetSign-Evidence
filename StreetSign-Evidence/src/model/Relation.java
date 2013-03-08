@@ -58,13 +58,16 @@ public class Relation {
 		if (type.equalsIgnoreCase("inside")) {
 			String signType;
 			String maxType = "unkown";
-			double maxValue = 0.0;
+			double maxBelief = 0.0;
+			double pl = 0.0;
+			double belief;
 
 			for (String type : primTypes) {
-				double pl = solution.getPlausibility(type);
-				if (pl > maxValue) {
-					maxValue = pl;
+				belief = solution.getBelief(type);
+				if (belief > maxBelief) {
+					maxBelief = belief;
 					maxType = type;
+					pl = solution.getPlausibility(type);					
 				}
 			}
 
@@ -90,7 +93,7 @@ public class Relation {
 
 			}
 
-			return new Sign(this, signType, maxValue);
+			return new Sign(this, signType, maxBelief, pl);
 		} else
 			return null;
 	}
