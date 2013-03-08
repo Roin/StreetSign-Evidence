@@ -7,9 +7,10 @@ import model.Sign;
 import util.CSVParser;
 
 public class Anwendung {
-	
+
 	static private ArrayList<Sign> signs = new ArrayList<Sign>();
-	
+	static private ArrayList<Relation> relations = new ArrayList<Relation>();
+
 	public static void main(String[] args) {
 		System.out.println("Start ...");
 		CSVParser parser = new CSVParser("../testdata2.csv");
@@ -17,14 +18,18 @@ public class Anwendung {
 
 		for (Relation rel : parser.getRelations()) {
 			rel.calculateEvidence();
-			
-			if(rel.generateSign() != null)
-//				signs.add(rel.generateSign());
-			System.out.println(rel.generateSign());
-			
+			relations.add(rel);
 
-
+			if (rel.generateSign() != null)
+				signs.add(rel.generateSign());
 		}
+
+		for (Sign sign : signs) {
+			sign.generateRelation(relations, signs);
+		}
+		
+		for(Sign sign : signs)
+			System.out.println(sign);
 
 		System.out.println("Ending ...");
 

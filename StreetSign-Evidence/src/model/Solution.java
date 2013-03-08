@@ -126,7 +126,7 @@ public class Solution {
 				pl += cell.getProbability();
 		}
 
-		return pl;
+		return pl * 0.75;
 	}
 
 	public double getBelief(String type) {
@@ -137,7 +137,7 @@ public class Solution {
 				belief += cell.getProbability();
 		}
 
-		return belief;
+		return belief * 0.75;
 	}
 
 	public String toString() {
