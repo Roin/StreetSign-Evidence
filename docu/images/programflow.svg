@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Generiert durch Microsoft Visio 11.0, SVG Export, v1.0 programflow.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11.6929in" height="8.26772in"
+		viewBox="0 0 841.89 595.276" xml:space="preserve" color-interpolation-filters="sRGB" class="st13">
+	<v:documentProperties v:langID="1031" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(0):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {marker-start:url(#mrkr5-8);stroke:#1f497d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st2 {fill:#1f497d;fill-opacity:1;stroke:#1f497d;stroke-opacity:1;stroke-width:0.28409090909091}
+		.st3 {visibility:visible}
+		.st4 {fill:#464646;fill-opacity:0.5;stroke:#464646;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.5;stroke-width:0.25}
+		.st5 {fill:url(#grad28-5);stroke:#1f497d;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st6 {fill:#000000;font-family:Calibri;font-size:1.99999em}
+		.st7 {marker-end:url(#mrkr5-59);marker-start:url(#mrkr5-8);stroke:#1f497d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st8 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st9 {fill:#000000;font-family:Calibri;font-size:1.5em}
+		.st10 {marker-end:url(#mrkr5-59);stroke:#1f497d;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st11 {font-size:1em}
+		.st12 {fill:#000000;font-family:Calibri;font-size:1.99999em;font-weight:bold}
+		.st13 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Patterns_And_Gradients">
+		<linearGradient id="grad28-5" v:fillPattern="28" v:foreground="#c4d2e3" v:background="#9ab3d1" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0" style="stop-color:#c4d2e3;stop-opacity:1"/>
+			<stop offset="1" style="stop-color:#9ab3d1;stop-opacity:1"/>
+		</linearGradient>
+	</defs>
+	<defs id="Markers">
+		<g id="lend5">
+			<path d="M 2 1 L 0 0 L 1.98117 -0.993387 C 1.67173 -0.364515 1.67301 0.372641 1.98465 1.00043 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr5-8" class="st2" v:arrowType="5" v:arrowSize="2" v:setback="5.8" refX="5.8" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend5" transform="scale(3.52) "/>
+		</marker>
+		<marker id="mrkr5-59" class="st2" v:arrowType="5" v:arrowSize="2" v:setback="6.16" refX="-6.16" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend5" transform="scale(-3.52,-3.52) "/>
+		</marker>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+			<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Zeichenblatt-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Flussdiagramm" v:index="0"/>
+		<v:layer v:name="Verbinder" v:index="1"/>
+		<g id="shape13-1" v:mID="13" v:groupContext="shape" v:layerMember="1" transform="translate(277.859,-328.819)">
+			<title>Dynamischer Verbinder.13</title>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<path d="M-5.62 589.51 L-5.66 589.15 L-9.15 555.59" class="st1"/>
+		</g>
+		<g id="shape1-9" v:mID="1" v:groupContext="shape" v:layerMember="0" transform="translate(515.906,-306.142)">
+			<title>Start/Ende</title>
+			<desc>Cookbook</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Kosten" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Prozessnummer" v:prompt="" v:type="2" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Besitzer" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Funktionsname" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Startdatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="Enddatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Nicht begonnen;In Bearbeitung;Abgeschlossen;Zurückgestellt;Auf Eingabe wartend" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.39370078740157):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.47244094488189):24"/>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+			<v:textRect cx="63.7795" cy="578.268" width="127.56" height="34.0157"/>
+			<g id="shadow1-10" v:groupContext="shadow" v:shadowOffsetX="1.44" v:shadowOffsetY="-1.44" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.44,1.44)" class="st3">
+				<path d="M17.01 595.28 L110.55 595.28 A17.0079 17.0079 -180 0 0 110.55 561.26 L17.01 561.26 A17.0079 17.0079 -180
+							 1 0 17.01 595.28 Z" class="st4"/>
+			</g>
+			<path d="M17.01 595.28 L110.55 595.28 A17.0079 17.0079 -180 0 0 110.55 561.26 L17.01 561.26 A17.0079 17.0079 -180 1 0
+						 17.01 595.28 Z" class="st5"/>
+			<text x="14.85" y="585.47" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Cookbook</text>		</g>
+		<g id="shape2-15" v:mID="2" v:groupContext="shape" v:layerMember="0" transform="translate(304.668,-518.74)">
+			<title>Start/Ende.2</title>
+			<desc>Edit</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Kosten" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Prozessnummer" v:prompt="" v:type="2" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Besitzer" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Funktionsname" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Startdatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="Enddatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Nicht begonnen;In Bearbeitung;Abgeschlossen;Zurückgestellt;Auf Eingabe wartend" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.39370078740157):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.47244094488189):24"/>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+			<v:textRect cx="31.8898" cy="578.268" width="63.78" height="34.0157"/>
+			<g id="shadow2-16" v:groupContext="shadow" v:shadowOffsetX="1.44" v:shadowOffsetY="-1.44" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.44,1.44)" class="st3">
+				<path d="M15.94 595.28 L47.83 595.28 A15.9449 17.0079 -180 0 0 47.83 561.26 L15.94 561.26 A15.9449 17.0079 -180 1
+							 0 15.94 595.28 Z" class="st4"/>
+			</g>
+			<path d="M15.94 595.28 L47.83 595.28 A15.9449 17.0079 -180 0 0 47.83 561.26 L15.94 561.26 A15.9449 17.0079 -180 1 0 15.94
+						 595.28 Z" class="st5"/>
+			<text x="12.95" y="585.47" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Edit</text>		</g>
+		<g id="shape3-21" v:mID="3" v:groupContext="shape" v:layerMember="0" transform="translate(217.559,-368.504)">
+			<title>Start/Ende.3</title>
+			<desc>Confirm</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Kosten" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Prozessnummer" v:prompt="" v:type="2" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Besitzer" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Funktionsname" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Startdatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="Enddatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Nicht begonnen;In Bearbeitung;Abgeschlossen;Zurückgestellt;Auf Eingabe wartend" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.39370078740157):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.47244094488189):24"/>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+			<v:textRect cx="51.1512" cy="578.268" width="102.31" height="34.0157"/>
+			<g id="shadow3-22" v:groupContext="shadow" v:shadowOffsetX="1.44" v:shadowOffsetY="-1.44" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.44,1.44)" class="st3">
+				<path d="M17.01 595.28 L85.29 595.28 A17.0079 17.0079 -180 0 0 85.29 561.26 L17.01 561.26 A17.0079 17.0079 -180 1
+							 0 17.01 595.28 Z" class="st4"/>
+			</g>
+			<path d="M17.01 595.28 L85.29 595.28 A17.0079 17.0079 -180 0 0 85.29 561.26 L17.01 561.26 A17.0079 17.0079 -180 1 0 17.01
+						 595.28 Z" class="st5"/>
+			<text x="11.93" y="585.47" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Confirm</text>		</g>
+		<g id="shape4-27" v:mID="4" v:groupContext="shape" v:layerMember="0" transform="translate(167.953,-294.803)">
+			<title>Start/Ende.4</title>
+			<desc>Equipment</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Kosten" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Prozessnummer" v:prompt="" v:type="2" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Besitzer" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Funktionsname" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Startdatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="Enddatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Nicht begonnen;In Bearbeitung;Abgeschlossen;Zurückgestellt;Auf Eingabe wartend" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.39370078740157):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.47244094488189):24"/>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+			<v:textRect cx="63.7795" cy="578.268" width="127.56" height="34.0157"/>
+			<g id="shadow4-28" v:groupContext="shadow" v:shadowOffsetX="1.44" v:shadowOffsetY="-1.44" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.44,1.44)" class="st3">
+				<path d="M17.01 595.28 L110.55 595.28 A17.0079 17.0079 -180 0 0 110.55 561.26 L17.01 561.26 A17.0079 17.0079 -180
+							 1 0 17.01 595.28 Z" class="st4"/>
+			</g>
+			<path d="M17.01 595.28 L110.55 595.28 A17.0079 17.0079 -180 0 0 110.55 561.26 L17.01 561.26 A17.0079 17.0079 -180 1 0
+						 17.01 595.28 Z" class="st5"/>
+			<text x="10.37" y="585.47" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Equipment</text>		</g>
+		<g id="shape5-33" v:mID="5" v:groupContext="shape" v:layerMember="0" transform="translate(530.787,-425.197)">
+			<title>Start/Ende.5</title>
+			<desc>View</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Kosten" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Prozessnummer" v:prompt="" v:type="2" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Besitzer" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Funktionsname" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Startdatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="Enddatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Nicht begonnen;In Bearbeitung;Abgeschlossen;Zurückgestellt;Auf Eingabe wartend" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.39370078740157):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.47244094488189):24"/>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+			<v:textRect cx="38.9764" cy="578.268" width="77.96" height="34.0157"/>
+			<g id="shadow5-34" v:groupContext="shadow" v:shadowOffsetX="1.44" v:shadowOffsetY="-1.44" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.44,1.44)" class="st3">
+				<path d="M17.01 595.28 L60.94 595.28 A17.0079 17.0079 -180 0 0 60.94 561.26 L17.01 561.26 A17.0079 17.0079 -180 1
+							 0 17.01 595.28 Z" class="st4"/>
+			</g>
+			<path d="M17.01 595.28 L60.94 595.28 A17.0079 17.0079 -180 0 0 60.94 561.26 L17.01 561.26 A17.0079 17.0079 -180 1 0 17.01
+						 595.28 Z" class="st5"/>
+			<text x="14.87" y="585.47" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>View</text>		</g>
+		<g id="shape6-39" v:mID="6" v:groupContext="shape" v:layerMember="0" transform="translate(651.969,-374.173)">
+			<title>Start/Ende.6</title>
+			<desc>Details</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Kosten" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Prozessnummer" v:prompt="" v:type="2" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Besitzer" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Funktionsname" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Startdatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="Enddatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Nicht begonnen;In Bearbeitung;Abgeschlossen;Zurückgestellt;Auf Eingabe wartend" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.39370078740157):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.47244094488189):24"/>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+			<v:textRect cx="46.063" cy="578.268" width="92.13" height="34.0157"/>
+			<g id="shadow6-40" v:groupContext="shadow" v:shadowOffsetX="1.44" v:shadowOffsetY="-1.44" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.44,1.44)" class="st3">
+				<path d="M17.01 595.28 L75.12 595.28 A17.0079 17.0079 -180 0 0 75.12 561.26 L17.01 561.26 A17.0079 17.0079 -180 1
+							 0 17.01 595.28 Z" class="st4"/>
+			</g>
+			<path d="M17.01 595.28 L75.12 595.28 A17.0079 17.0079 -180 0 0 75.12 561.26 L17.01 561.26 A17.0079 17.0079 -180 1 0 17.01
+						 595.28 Z" class="st5"/>
+			<text x="12.74" y="585.47" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Details</text>		</g>
+		<g id="shape7-45" v:mID="7" v:groupContext="shape" v:layerMember="0" transform="translate(326.835,-274.961)">
+			<title>Start/Ende.7</title>
+			<desc>Ingredient</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Kosten" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Prozessnummer" v:prompt="" v:type="2" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Besitzer" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Funktionsname" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Startdatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="Enddatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Nicht begonnen;In Bearbeitung;Abgeschlossen;Zurückgestellt;Auf Eingabe wartend" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.39370078740157):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.47244094488189):24"/>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+			<v:textRect cx="61.5827" cy="578.268" width="123.17" height="34.0157"/>
+			<g id="shadow7-46" v:groupContext="shadow" v:shadowOffsetX="1.44" v:shadowOffsetY="-1.44" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.44,1.44)" class="st3">
+				<path d="M17.01 595.28 L106.16 595.28 A17.0079 17.0079 -180 0 0 106.16 561.26 L17.01 561.26 A17.0079 17.0079 -180
+							 1 0 17.01 595.28 Z" class="st4"/>
+			</g>
+			<path d="M17.01 595.28 L106.16 595.28 A17.0079 17.0079 -180 0 0 106.16 561.26 L17.01 561.26 A17.0079 17.0079 -180 1 0
+						 17.01 595.28 Z" class="st5"/>
+			<text x="11.1" y="585.47" class="st6" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Ingredient</text>		</g>
+		<g id="shape8-51" v:mID="8" v:groupContext="shape" v:layerMember="1" transform="translate(368.447,-535.748)">
+			<title>Dynamischer Verbinder</title>
+			<desc>Switch</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="81.1701" cy="642.047" width="90" height="29.6036" transform="rotate(15)"/>
+			<path d="M5.03 598.17 L5.34 598.35 L157 685.74" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="220.395" y="588.362" width="48.3662" height="21.5999" transform="rotate(15)"
+					class="st8"/>
+			<text x="220.4" y="604.56" transform="rotate(15)" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Switch</text>		</g>
+		<g id="shape9-62" v:mID="9" v:groupContext="shape" v:layerMember="1" transform="translate(319.861,-385.512)">
+			<title>Dynamischer Verbinder.9</title>
+			<desc>Switch</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="105.463" cy="566.929" width="90" height="29.6036" transform="rotate(-15)"/>
+			<path d="M5.6 593.77 L5.95 593.68 L204.98 540.18" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-69.0457" y="564.108" width="48.3662" height="21.5999" transform="rotate(-15)"
+					class="st8"/>
+			<text x="-69.05" y="580.31" transform="rotate(-15)" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Switch</text>		</g>
+		<g id="shape10-72" v:mID="10" v:groupContext="shape" v:layerMember="1" transform="translate(317.377,-519.094)">
+			<title>Dynamischer Verbinder.10</title>
+			<desc>Create</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-14.7786" cy="632.48" width="90" height="29.6036" transform="rotate(-75)"/>
+			<path d="M0 595.28 L-46.29 706.17" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-638.972" y="138.623" width="48.4365" height="21.5999" transform="rotate(-75)"
+					class="st8"/>
+			<text x="-638.97" y="154.82" transform="rotate(-75)" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Create</text>		</g>
+		<g id="shape11-80" v:mID="11" v:groupContext="shape" v:layerMember="1" transform="translate(315.287,-373.906)">
+			<title>Dynamischer Verbinder.11</title>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<path d="M0 595.28 L73.13 595.28 L73.13 654.05" class="st10"/>
+		</g>
+		<g id="shape12-86" v:mID="12" v:groupContext="shape" v:layerMember="1" transform="translate(239.009,-368.682)">
+			<title>Dynamischer Verbinder.12</title>
+			<desc>Switch</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="12.5662" cy="615.296" width="90" height="29.6036"/>
+			<path d="M-6.95 601.08 L-6.96 601.44 L-7.28 635.14" class="st1"/>
+			<rect v:rectContext="textBkgnd" x="-11.6169" y="604.496" width="48.3662" height="21.5999" class="st8"/>
+			<text x="-11.62" y="620.7" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Switch</text>		</g>
+		<g id="shape14-94" v:mID="14" v:groupContext="shape" v:layerMember="1" transform="translate(326.835,-291.969)">
+			<title>Dynamischer Verbinder.14</title>
+			<desc>Switch</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="21.1181" cy="547.087" width="90" height="29.6036"/>
+			<path d="M0 595.28 L-24.69 595.28 L-24.69 524.9" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-3.065" y="536.287" width="48.3662" height="21.5999" class="st8"/>
+			<text x="-3.06" y="552.49" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Switch</text>		</g>
+		<g id="shape17-102" v:mID="17" v:groupContext="shape" v:layerMember="1" transform="translate(576.85,-521.575)">
+			<title>Dynamischer Verbinder.17</title>
+			<desc>On Module Load</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-52.4409" cy="620.787" width="94.41" height="51.2036"/>
+			<path d="M-7.09 595.28 L-7.09 651.48" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-93.6045" y="599.188" width="82.3271" height="43.1999" class="st8"/>
+			<text x="-93.6" y="615.39" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>On Module<v:lf/><tspan
+						x="-70.01" dy="1.2em" class="st11">Load</tspan></text>		</g>
+		<g id="shape18-111" v:mID="18" v:groupContext="shape" v:layerMember="1" transform="translate(608.74,-442.205)">
+			<title>Dynamischer Verbinder.18</title>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<path d="M0 595.28 L89.29 595.28 L89.29 623.13" class="st10"/>
+		</g>
+		<g id="shape19-117" v:mID="19" v:groupContext="shape" v:layerMember="1" transform="translate(651.969,-391.181)">
+			<title>Dynamischer Verbinder.19</title>
+			<desc>Switch</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-5.66929" cy="566.929" width="90" height="29.6036"/>
+			<path d="M0 595.28 L-56.4 595.28 L-56.4 566.98" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-29.8524" y="556.129" width="48.3662" height="21.5999" class="st8"/>
+			<text x="-29.85" y="572.33" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Switch</text>		</g>
+		<g id="shape20-125" v:mID="20" v:groupContext="shape" v:layerMember="1" transform="translate(571.89,-425.197)">
+			<title>Dynamischer Verbinder.20</title>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<path d="M6.38 595.28 L7.69 674.16" class="st10"/>
+		</g>
+		<g id="shape21-131" v:mID="21" v:groupContext="shape" v:layerMember="1" transform="translate(541.417,-340.157)">
+			<title>Dynamischer Verbinder.21</title>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<path d="M7.09 595.28 L7.09 516.4" class="st10"/>
+		</g>
+		<g id="shape22-137" v:mID="22" v:groupContext="shape" v:layerMember="1" transform="translate(515.906,-323.15)">
+			<title>Dynamischer Verbinder.22</title>
+			<desc>Print</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="5.66929" cy="629.291" width="90" height="29.6036"/>
+			<path d="M0 595.28 L-19.28 595.28 L-19.28 641.76 L29.76 641.76 L29.76 618.44" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-11.9264" y="618.492" width="35.1914" height="21.5999" class="st8"/>
+			<text x="-11.93" y="634.69" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Print</text>		</g>
+		<g id="shape23-145" v:mID="23" v:groupContext="shape" v:layerMember="1" transform="translate(643.465,-323.15)">
+			<title>Dynamischer Verbinder.23</title>
+			<desc>Delete</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="14.1732" cy="623.622" width="90" height="29.6036"/>
+			<path d="M0 595.28 L48.19 595.28 L48.19 645.35 L-24.09 645.35 L-24.09 618.44" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-9.87804" y="612.822" width="48.1025" height="21.5999" class="st8"/>
+			<text x="-9.88" y="629.02" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Delete</text>		</g>
+		<g id="shape24-153" v:mID="24" v:groupContext="shape" v:layerMember="1" transform="translate(594.921,-463.465)">
+			<title>Dynamischer Verbinder.24</title>
+			<desc>Add To Cookbook</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="79.7244" cy="548.504" width="141.2" height="29.6036"/>
+			<path d="M0.35 599.53 L0.35 564.57 L49.49 564.57 L49.49 605.2 L19.98 605.2" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="15.1643" y="537.704" width="129.12" height="21.5999" class="st8"/>
+			<text x="15.16" y="553.9" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Add To Cookbook</text>		</g>
+		<g id="shape15-161" v:mID="15" v:groupContext="shape" v:layerMember="1" transform="translate(217.559,-385.512)">
+			<title>Dynamischer Verbinder.15</title>
+			<desc>Picture Upload</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-6.97323" cy="498.898" width="120.61" height="29.6036"/>
+			<path d="M0 595.28 L-21.26 595.28 L-21.26 513.07 L25.77 513.07 L25.77 572.11" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-61.2413" y="488.098" width="108.536" height="21.5999" class="st8"/>
+			<text x="-61.24" y="504.3" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Picture Upload</text>		</g>
+		<g id="shape25-169" v:mID="25" v:groupContext="shape" v:layerMember="1" transform="translate(231.732,-294.803)">
+			<title>Dynamischer Verbinder.25</title>
+			<desc>Add</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-61.6535" cy="616.535" width="90" height="29.6036"/>
+			<path d="M0 595.28 L0 616.54 L-85.04 616.54 L-85.04 578.27 L-69.94 578.27" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-76.3181" y="605.736" width="29.3291" height="21.5999" class="st8"/>
+			<text x="-76.32" y="621.94" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Add</text>		</g>
+		<g id="shape26-177" v:mID="26" v:groupContext="shape" v:layerMember="1" transform="translate(388.417,-274.961)">
+			<title>Dynamischer Verbinder.26</title>
+			<desc>Add</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="39.9468" cy="609.26" width="90" height="29.6036"/>
+			<path d="M0 595.28 L0 630.99 L78.59 630.99 L78.59 578.27 L67.74 578.27" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="25.2823" y="598.46" width="29.3291" height="21.5999" class="st8"/>
+			<text x="25.28" y="614.66" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Add</text>		</g>
+		<g id="shape27-185" v:mID="27" v:groupContext="shape" v:layerMember="1" transform="translate(722.835,-408.189)">
+			<title>Dynamischer Verbinder.27</title>
+			<desc>Add Recipe</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="28.3465" cy="566.929" width="90" height="51.2036"/>
+			<path d="M0 595.28 L0 538.58 L62.36 538.58 L62.36 612.28 L27.42 612.28" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="3.90407" y="545.329" width="48.8848" height="43.1999" class="st8"/>
+			<text x="13.68" y="561.53" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Add<v:newlineChar/><tspan
+						x="3.9" dy="1.2em" class="st11">Recipe</tspan></text>		</g>
+		<g id="shape28-194" v:mID="28" v:groupContext="shape" v:layerMember="1" transform="translate(302.145,-402.52)">
+			<title>Dynamischer Verbinder.28</title>
+			<desc>Save</desc>
+			<v:userDefs>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="17.4614" cy="552.756" width="90" height="29.6036" transform="rotate(-75)"/>
+			<path d="M0 595.28 L48.86 484.66" class="st10"/>
+			<rect v:rectContext="textBkgnd" x="-546.391" y="149.13" width="33.9785" height="21.5999" transform="rotate(-75)"
+					class="st8"/>
+			<text x="-546.39" y="165.33" transform="rotate(-75)" class="st9" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Save</text>		</g>
+		<g id="shape29-202" v:mID="29" v:groupContext="shape" v:layerMember="0" transform="translate(534.331,-521.575)">
+			<title>Prozess</title>
+			<desc>Start</desc>
+			<v:custProps>
+				<v:cp v:nameU="Cost" v:lbl="Kosten" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="ProcessNumber" v:lbl="Prozessnummer" v:prompt="" v:type="2" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Owner" v:lbl="Besitzer" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Function" v:lbl="Funktionsname" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+				<v:cp v:nameU="StartDate" v:lbl="Startdatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="EndDate" v:lbl="Enddatum" v:prompt="" v:type="5" v:format="" v:sortKey="" v:invis="false"
+						v:ask="false" v:langID="1031" v:cal="0"/>
+				<v:cp v:nameU="Status" v:lbl="Status" v:prompt="" v:type="4"
+						v:format=";Nicht begonnen;In Bearbeitung;Abgeschlossen;Zurückgestellt;Auf Eingabe wartend" v:sortKey=""
+						v:invis="false" v:ask="false" v:langID="1031" v:cal="0" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(14):26"/>
+				<v:ud v:nameU="DefaultWidth" v:prompt="" v:val="VT0(0.98425196850394):24"/>
+				<v:ud v:nameU="DefaultHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
+				<v:ud v:nameU="ResizeTxtHeight" v:prompt="" v:val="VT0(0.59055118110236):24"/>
+				<v:ud v:nameU="msvThemeColors" v:val="VT0(2):26"/>
+				<v:ud v:nameU="msvThemeEffects" v:val="VT0(2):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(2,2,2,2)" v:tabSpace="42.5197"/>
+			<v:textRect cx="35.4331" cy="574.016" width="70.87" height="42.5197"/>
+			<g id="shadow29-203" v:groupContext="shadow" v:shadowOffsetX="1.44" v:shadowOffsetY="-1.44" v:shadowType="1"
+					transform="matrix(1,0,0,1,1.44,1.44)" class="st3">
+				<rect x="0" y="552.756" width="70.8661" height="42.5197" class="st4"/>
+			</g>
+			<rect x="0" y="552.756" width="70.8661" height="42.5197" class="st5"/>
+			<text x="11.25" y="581.22" class="st12" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Start</text>		</g>
+	</g>
+</svg>

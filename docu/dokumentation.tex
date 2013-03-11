@@ -1,0 +1,70 @@
+%%**************************************************************
+%% Vorlage fuer Bachelorarbeiten (o.ä.) der DHBW
+%%
+%% Autor: Tobias Dreher, Yves Fischer
+%% Datum: 06.07.2011
+%%**************************************************************
+
+\newcommand{\pdftitel}{Entwicklung eines Online Kochbuchs mithilfe Java Server Pages und Hibernate}
+\newcommand{\autor}{Christian Burkard}
+\newcommand{\arbeit}{Webengineering II}
+
+\input{header} 
+
+% Ab jetzt können auch Umlaute verwendet werden
+\newcommand{\titel}{Entwicklung eines Online Kochbuchs mithilfe von Java Server Pages und Hibernate}
+\newcommand{\martrikelnr}{4206853}
+\newcommand{\kurs}{TITAIA2010}
+\newcommand{\datumAbgabe}{Juni 2012}
+\newcommand{\firma}{Hewlett-Packard GmbH}
+\newcommand{\firmenort}{Böblingen}
+\newcommand{\abgabeort}{Stuttgart}
+\newcommand{\studiengang}{Studiengang Angewandte Informatik}
+\newcommand{\dhbw}{Stuttgart}
+\newcommand{\betreuer}{Prof. Dr. Barbara Dörsam}
+%\newcommand{\zeitraum}{}
+
+\makeglossaries
+\input{glossary}
+
+\begin{document}
+
+	% Deckblatt
+	\begin{spacing}{1}
+		\input{deckblatt}
+	\end{spacing}
+	\newpage
+	
+	\renewcommand{\thepage}{\Roman{page}}
+	\setcounter{page}{1}	
+
+	% Erklärung
+	%\input{erklaerung}
+	%\newpage
+
+	% Abstract
+	%\input{abstract}
+	%\newpage
+
+	% Inhaltsverzeichnis
+	\begin{spacing}{1.1}
+		\setcounter{tocdepth}{2}
+		\tableofcontents
+	\end{spacing}
+	\newpage
+
+	\renewcommand{\thepage}{\arabic{page}}
+	\setcounter{page}{1}
+	
+	% Inhalt
+	\input{content/01chapter}
+	\input{content/02chapter}
+	\input{content/03chapter}
+	\input{content/04chapter}
+	
+	
+	\clearpage
+	\input{content/appendix}
+
+\end{document}
+

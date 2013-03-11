@@ -1,0 +1,85 @@
+\chapter{Bilderupload}
+Das Hochladen von Bildern benötigt zunächst eine Eingabemöglichkeit für die Nutzer. Dies wird durch ein Formular realisiert und wird in Quellcode \ref{up_form} dargestellt.
+\begin{lstlisting}[caption={Formular zum Hochladen von Bildern},label=up_form]
+	<form enctype="multipart/form-data" action="Controller" method=POST>
+		<table>
+			<tr>
+				<td><b>Datei auswaehlen:</b></td>
+				<td><input name="fileInput" type="file"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Datei uploaden">
+				</td>
+			</tr>
+		</table>
+	</form>
+\end{lstlisting}
+Wichtig ist das \textit{enctype} Attribut mit dem Wert \textit{"mulitpart/form-data"} als Verschlüsselungsparameter der beim Verwenden des Eingabetyps \textit{"file"} benötigt wird. Dadurch ist auch die Übertragungsmethode \textit{POST} vorgeschrieben. Auch dieses Formular wird vom Controller verarbeitet.
+Darauf folgt ein gewöhnliches Formular Eingabefeld mit dem Typ \textit{"file"} welches erlaubt direkt den Pfad zu einer Datei einzugeben oder durch klick auf einen "Durchsuchen"-Button ein Auswahlfenster des Betriebsystems aufruft. Durch klick auf das Eingabefeld des Typs \textit{" submit"} wird die Formaction ausgeführt.
+Im Controller selbst muss nun die Aktion auf die passende Verschlüsselungsmethode überprüft werden. Dies geschieht durch die Abfrage des in Quellcode \ref{up_1} sichtbaren Codeausschnitts.
+\begin{lstlisting}[caption={Abfrage auf Verschlüsselungsmethode},label=up_1]
+    if ((contentType != null) && (contentType.indexOf("multipart/form-data") >= 0))
+    {
+        ...
+    }
+\end{lstlisting}
+Daraufhin muss der Datenstrom des Fileuploads eingelesen werden. Dies geschieht in unserem Fall über einen Zwischenpuffer. Der Code im Quellcode \ref{up_2} beschreibt dies näher.
+\begin{lstlisting}[caption={Zwischenspeichern des Datenstroms in einen Puffer},label=up_2]
+			DataInputStream in = new DataInputStream(req.getInputStream());
+			int formDataLength = req.getContentLength();
+			byte dataBytes[] = new byte[formDataLength];
+			int byteRead = 0;
+			int totalBytesRead = 0;
+			while (totalBytesRead < formDataLength) {
+				byteRead = in.read(dataBytes, totalBytesRead, formDataLength);
+				totalBytesRead += byteRead;
+			}
+\end{lstlisting}
+In Zeile 1 wird der Datenstrom initialisiert. In Zeile 2 die Länge des Datenstroms in \textit{formDataLength} gespeichert. Zeile 3 initialisiert den Zwischenspeicher als Array des Types \textit{byte} mit der Länge des Datenstroms. Zeile 4 und 5 initialisieren die Zähler für die gerade gelesenen Bytes und die insgesamt gelesenen Bytes. Die Schleife über Zeile 6-9 schaut, ob noch Daten aus dem Datenstrom fehlen. Solange das wahr ist wird aus dem Datenstrom gelesen und an \textit{dataBytes[totalBytesRead]} und die folgenden Felder des Arrays geschrieben, bis maximal \textit{formDataLength} Bytes gelesen wurden. Der Leseversuch kann aber auch schon früher abbrechen oder gar keine Bytes lesen. Daher muss das ganze iterativ in einer Schleife ausgeführt werden. Die Funkion \textit{read} gibt die Anzahl gelesener Bytes zurück. Dieser Wert wird zu den insgesamt gelesenen Bytes addiert. So kann die Schleife ausgeführt werden, bis alle Bytes gelesen wurden (also bricht ab, sobald \textit{totalBytesRead == formDataLength}).
+
+Um die Datei speichern zu können muss ihr Dateiname aus den Metadaten extrahiert werden. Dies wird in Quellcode \ref{up_3} beschrieben.
+\begin{lstlisting}[caption={Lesen des Dateinamen aus den Metadaten},label=up_3]
+            String file = new String(dataBytes, "ISO-8859-1");
+			int index = file.indexOf("filename=");
+			int indexFileNameStart = file.indexOf("\"", index) + 1;
+			int indexFileNameEnd = file.indexOf("\"", indexFileNameStart);
+			String saveFileName = file.substring(indexFileNameStart, indexFileNameEnd);
+\end{lstlisting}
+Der Pfad inklusive Dateiname wird in Zeile 1 initialisiert. Dann sucht man nach dem Name \textit{"filename="} des Name-Werte Paares für den Dateinamen. Der Dateiname startet nach dem Vorkommen des nächsten \textit{"}-Zeichens und endet au das darauffolgende \textit{"}-Zeichen. Aus den beiden Indizes lässt sich durch die \textit{substring()}-Methode der String, der den Dateinamen enthält extrahieren.
+
+Da die Einträge des Formulars über \textit{boundarys} getrennt sind, muss zunächst der String dieser Begrenzung extrahiert werden. Dies wird in \ref{up_4} beschrieben.
+\begin{lstlisting}[caption={Extrahieren des boundary-Strings},label=up_4]
+            index = file.indexOf("boundary");
+			index = contentType.indexOf("=", index + 1);
+			String boundary = contentType.substring(index + 1, contentType.length());
+\end{lstlisting}
+Man sucht im Datenstrom nach dem Vorkommen von \textit{"boundary"}. Der auf dem nächsten \textit{"="} folgende String bis zum Ende des Datentyps ist der Begrenzungsstring.
+Man muss außerdem den Start des Index auf den Anfang der Binärdaten setzen. Dies wird in Quellcode \ref{up_5} beschrieben.
+\begin{lstlisting}[caption={Navigiere zum Start der Binärdaten},label=up_5]
+			int indexStart = file.indexOf("Content-Type", indexFileNameEnd);
+			indexStart = file.indexOf("image", indexStart + 1);
+			indexStart = file.indexOf("\n", indexStart + 1);
+			indexStart = file.indexOf("\n", indexStart + 1);
+			indexStart++;
+\end{lstlisting}
+
+Daraufhin müssen die über \textit{boundary} getrennten Eingabeelemente separiert werden. Ein Umsetzung dessen ist in Quellcode \ref{up_6} zu sehen.
+\begin{lstlisting}[caption={Trennung der Eingabeelemente nach dem Begrenzungsstring},label=YourLabel]
+            int boundaryLocation = file.indexOf(boundary, indexStart);
+			int endPos = file.substring(0, boundaryLocation).length() - 4;
+			filePath = "img/" + saveFileName;
+			saveFileName = "D:/Users/Watnuss/Programming/cookbook/kochbuch/WebContent/img/"	+ saveFileName;
+\end{lstlisting}
+Es wird der Index des Begrenzungsstring ermittelt und die Länge der zu lesenden Binärdatei. Darauf folgend wird aus dem Dateipfad zum Speicherplatz und dem Dateinamen der Pfad der Datei auf dem Server gebildet.
+
+Als letzter Schritt wird die Zwischengespeicherte Datei an ihren Bestimmungsort geschrieben. Dies ist in Quellcode \ref{up_7} zu beobachten.
+\begin{lstlisting}[caption={Speichern der Datei auf dem Server},label=up_7]
+			FileOutputStream fileOut = new FileOutputStream(saveFileName);
+			fileOut.write(dataBytes, indexStart, (endPos - indexStart));
+			fileOut.flush();
+			fileOut.close();
+\end{lstlisting}
+Es wird ein Datenstrom zum Bestimmungsort der Datei geöffnet und die Daten aus dem Puffer vom Start der Binärdatei bis zu ihrem Ende geschrieben. Danach wird der Datenstrom geschlossen und die Datei ist auf dem Server verfügbar.
+
+
+
