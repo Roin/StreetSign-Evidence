@@ -61,7 +61,7 @@ public class Solution {
 	}
 
 	public void calculateTable() {
-		// TODO Tabelle füllen und Wahrscheinlichkeiten berechnen (mit
+		// TODO Tabelle fuellen und Wahrscheinlichkeiten berechnen (mit
 		// Korrekturfaktor!)
 
 		// Location in Solution table
