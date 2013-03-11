@@ -2,6 +2,14 @@ package model;
 
 import java.util.Map;
 
+/**
+ * <b>Description of the Solution class</b> <br>
+ * Used to calculate evidence tables, their correction factor/conflict and to
+ * determine the plausibility or belief of this evidence table.
+ * 
+ * @author Watnuss
+ * 
+ */
 public class Solution {
 
 	private String[] set1;
@@ -13,10 +21,16 @@ public class Solution {
 
 	private Cell[] table;
 
-	public Solution(int dim) {
-		table = new Cell[dim];
-	}
-
+	/**
+	 * <b>Description of Solution(Cell[] t1, Cell[] t2)</b><br>
+	 * Generates and determines the solution of an evidence table from two input
+	 * tables.
+	 * 
+	 * @param t1
+	 *            First input evidence table
+	 * @param t2
+	 *            Second input evidence table
+	 */
 	public Solution(Cell[] t1, Cell[] t2) {
 
 		table = new Cell[t1.length * t2.length];
@@ -39,6 +53,17 @@ public class Solution {
 		calculateTable();
 	}
 
+	/**
+	 * <b>Description of Solution(Cell[] oldTable, Map.entry<String, Double>
+	 * pair)</b><br>
+	 * Generates and determines the solution of an evidence table from an input
+	 * table and a single evidence expression.
+	 * 
+	 * @param oldTable
+	 *            Input from an evidence table
+	 * @param pair
+	 *            Input from a single evidence expression
+	 */
 	public Solution(Cell[] oldTable, Map.Entry<String, Double> pair) {
 		table = new Cell[oldTable.length * 2];
 		set1 = new String[oldTable.length];
@@ -60,10 +85,11 @@ public class Solution {
 		calculateTable();
 	}
 
-	public void calculateTable() {
-		// TODO Tabelle füllen und Wahrscheinlichkeiten berechnen (mit
-		// Korrekturfaktor!)
-
+	/**
+	 * <b>Description of calculateTable()</b><br>
+	 * Calculates the intersection of two sets and their new evidence.
+	 */
+	private void calculateTable() {
 		// Location in Solution table
 		int dim = 0;
 
@@ -83,12 +109,13 @@ public class Solution {
 				dim++;
 			}
 		}
-
 		determineK();
-		calcNewProbs();
-
 	}
 
+	/**
+	 * <b>Description of calcNewProbs()</b><br>
+	 * Calculates the new propabilites after determining the correction factor.
+	 */
 	private void calcNewProbs() {
 		for (Cell cell : table)
 			if (cell.getIntersectionAsString().equalsIgnoreCase(" "))
@@ -97,6 +124,12 @@ public class Solution {
 				cell.setProbability(cell.getProbability() * k);
 	}
 
+	/**
+	 * <b>Description of determineK()</b><br>
+	 * Determines the conflict and correction factor for this evidence table.
+	 * 
+	 * @return Correction factor of this evidence table
+	 */
 	private double determineK() {
 		double conflict = 0.0;
 
@@ -106,17 +139,30 @@ public class Solution {
 
 		k = 1 / (1 - conflict);
 
+		if (conflict > 0.0)
+			calcNewProbs();
+
 		return k;
 	}
 
-	public double getK() {
-		return k;
-	}
-
+	/**
+	 * <b>Description of getSolution()</b><br>
+	 * Gets the solution evidence table.
+	 * 
+	 * @return Evidence Table of the solution
+	 */
 	public Cell[] getSolution() {
 		return table;
 	}
 
+	/**
+	 * <b>Description of getPlausibility(String type)</b><br>
+	 * Calculates the plausibility of a set in this evidence table.
+	 * 
+	 * @param type
+	 *            Set of one element
+	 * @return Plausibility of the single element set
+	 */
 	public double getPlausibility(String type) {
 		double pl = 0.0;
 
@@ -129,6 +175,14 @@ public class Solution {
 		return pl * 0.75;
 	}
 
+	/**
+	 * <b>Description of getBelief(String type) Calculates the belief of a set
+	 * in this evidence table.
+	 * 
+	 * @param type
+	 *            Set of one element
+	 * @return Belief of the single element set
+	 */
 	public double getBelief(String type) {
 		double belief = 0.0;
 
