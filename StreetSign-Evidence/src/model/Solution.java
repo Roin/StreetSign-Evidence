@@ -85,11 +85,18 @@ public class Solution {
 		calculateTable();
 	}
 
+<<<<<<< HEAD
 	/**
 	 * <b>Description of calculateTable()</b><br>
 	 * Calculates the intersection of two sets and their new evidence.
 	 */
 	private void calculateTable() {
+=======
+	public void calculateTable() {
+		// TODO Tabelle fuellen und Wahrscheinlichkeiten berechnen (mit
+		// Korrekturfaktor!)
+
+>>>>>>> 81f40f46269a24b799b5417360762efbe4921efb
 		// Location in Solution table
 		int dim = 0;
 

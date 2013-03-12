@@ -107,12 +107,17 @@ public class Sign {
 
 		sb.append("Schildtyp: " + signType + " (ID: " + id + ").\n");
 		sb.append("Glaube: " + belief + ".\n");
-		sb.append("Plausibilität: " + plausibility + ".\n");
+		sb.append("Plausibilitaet: " + plausibility + ".\n");
 		sb.append("prim1: " + rel.getPrim1().getId() + "\nprim2: "
 				+ rel.getPrim2().getId() + "\n");
+<<<<<<< HEAD
 		sb.append("Befindet sich mit einer Glaubwürdigkeit von 0,8 über "
 				+ ((onTopOf != null) ? ("dem " + onTopOf.getSignType()
 						+ " (ID: " + onTopOf.getId() + ")")
+=======
+		sb.append("Befindet sich mit einer Glaubwuerdigkeit von 0,8 ueber "
+				+ ((onTopOf != null) ? ("dem " + onTopOf.getSignType())
+>>>>>>> 81f40f46269a24b799b5417360762efbe4921efb
 						: ("keinem weiteren Schild")) + ".\n");
 
 		return sb.toString();

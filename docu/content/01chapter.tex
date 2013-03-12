@@ -1,3 +1,15 @@
-\chapter{Aufgabenstellung}
-Ziel der Vorlesung Webengineering II war es den Studenten die serverseitige Programmierung anhand von Java Server Pages (\acrshort{jsp}) beizubringen. Es kommt eine Drei-Schichten-Architektur (\acrshort{mvc}) zum Einsatz. Die Anbindung an die \gls{mysql}-Datenbank erfolgt über \gls{hibernate}.
-Dieses Dokument dient der Dokumentation der wichtigsten Module des Kochbuchs.
+\chapter{Einführung}
+Anders als im Readme beschrieben haben wir uns für einen
+einzigen File als Input entschieden. Der Gründe dafür waren
+das im ersten Beispiel nur eine einzige Datei vorlag und wir
+deshalb unseren ursprünglichen Entwurf darauf ausgelegt hatten.
+Außerdem spielt es auch keine Rolle ob man ein oder zwei
+Dateien verwendet.\\
+\section{Input File Format}
+  Das Input-File ist in 2 Sektionen unterteilt, welche mittels
+  Semikolon voneinander getrennt sind. Die einzelnen Attribute
+  werden mittels Komma separiert.\\
+  Aus diesem Format sind wir nun in der Lage Primitive und
+  Relationen zu generieren.
+  Zuerst werden die Primitive ausgelesen und in eine geeignete
+  Datenstruktur gespeichert, anschließend die Relationen.
