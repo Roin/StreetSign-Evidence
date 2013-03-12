@@ -14,6 +14,14 @@ import java.util.HashMap;
 import model.Primitive;
 import model.Relation;
 
+/**
+ * <b>Description of the CSVParser</b> <br>
+ * Contains the functionality to parse the input file from a defines CSV format
+ * to a String and then fills the data model objects with the data.
+ * 
+ * @author Watnuss
+ * 
+ */
 public class CSVParser {
 
 	private File file;
@@ -21,6 +29,14 @@ public class CSVParser {
 	private HashMap<Integer, Primitive> primitives;
 	private ArrayList<Relation> relations;
 
+	/**
+	 * <b>Descriptoin of CSVParser(String filepath)</b> <br>
+	 * 
+	 * Constructor for CSVParser Generates a parser objekt for a specified file.
+	 * 
+	 * @param filepath
+	 *            Path to the file which will be parsed
+	 */
 	public CSVParser(String filepath) {
 		primitives = new HashMap<Integer, Primitive>();
 		relations = new ArrayList<Relation>();
@@ -28,6 +44,10 @@ public class CSVParser {
 		file = new File(filepath);
 	}
 
+	/**
+	 * <b>Description of parse()</b> <br>
+	 * Parses the CSV file.
+	 */
 	public void parse() {
 		Primitive tmpPrim;
 		Relation tmpRel;
@@ -42,11 +62,12 @@ public class CSVParser {
 		for (String prim : primString) {
 			String data[] = prim.trim().split(",");
 			int id = new Integer(data[1]);
-			
+
 			// Does this Primitive already exist?
 			if (primitives.containsKey(id)) {
 				// Yes: Add to existing Primitive
-				primitives.get(id).addToMap(data[0].trim(), Double.parseDouble(data[2].trim()));
+				primitives.get(id).addToMap(data[0].trim(),
+						Double.parseDouble(data[2].trim()));
 			} else {
 				// No: Create and add to new Primitive
 				tmpPrim = new Primitive();
@@ -55,24 +76,32 @@ public class CSVParser {
 				primitives.put(id, tmpPrim);
 			}
 		}
-		
 
 		// Parse relations
 		for (String rel : relString) {
 			String data[] = rel.trim().split(",");
 			tmpRel = new Relation();
 			tmpRel.setType(data[0].trim());
-			
+
 			int idPrim1 = new Integer(data[1]);
 			int idPrim2 = new Integer(data[2]);
-			
+
 			tmpRel.setPrim1(primitives.get(idPrim1));
 			tmpRel.setPrim2(primitives.get(idPrim2));
-			
+
 			relations.add(tmpRel);
 		}
 	}
 
+	/**
+	 * <b>Description of getFileContents(File file)</b> <br>
+	 * 
+	 * Reads a CSV file into a String object
+	 * 
+	 * @param file
+	 *            The file object of the file to be read
+	 * @return String containing the read CSV file
+	 */
 	private static String getFileContents(File file) {
 		FileInputStream fin;
 		try {
@@ -90,10 +119,8 @@ public class CSVParser {
 			return chBuff.toString();
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.err.println("Return null @ CSVParser/getFileContents");
@@ -101,6 +128,12 @@ public class CSVParser {
 
 	}
 
+	/**
+	 * <b>Description of getRelations()</b> <br>
+	 * Getter function for Relation objects
+	 * 
+	 * @return A list which contains all Relation objects
+	 */
 	public ArrayList<Relation> getRelations() {
 		return relations;
 	}
