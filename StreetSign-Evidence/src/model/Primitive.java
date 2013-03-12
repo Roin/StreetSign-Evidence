@@ -87,7 +87,7 @@ public class Primitive {
 	 * Gets the Map of primitives of this object and their corresponding
 	 * reliabilities.
 	 * 
-	 * @return
+	 * @return Map containing the primitives and their corresponding reliabilities
 	 */
 	public HashMap<String, Double> getMap() {
 		return map;

@@ -110,7 +110,7 @@ public class Sign {
 		sb.append("Plausibilitaet: " + plausibility + ".\n");
 		sb.append("prim1: " + rel.getPrim1().getId() + "\nprim2: "
 				+ rel.getPrim2().getId() + "\n");
-		sb.append("Befindet sich mit einer Glaubwürdigkeit von 0,8 über "
+		sb.append("Befindet sich mit einer Glaubwuerdigkeit von 0,8 ueber "
 				+ ((onTopOf != null) ? ("dem " + onTopOf.getSignType()
 						+ " (ID: " + onTopOf.getId() + ")")
 						: ("keinem weiteren Schild")) + ".\n");

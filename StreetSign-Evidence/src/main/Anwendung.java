@@ -30,7 +30,7 @@ public class Anwendung {
 		CSVParser parser;
 		
 		if (args.length == 0)
-			parser = new CSVParser("../testdata2.csv");
+			parser = new CSVParser("testdata2.csv");
 		else
 			parser = new CSVParser(args[0].toString());
 
