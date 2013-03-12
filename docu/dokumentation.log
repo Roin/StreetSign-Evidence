@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.25)  12 MAR 2013 17:02
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.25)  12 MAR 2013 17:14
 entering extended mode
 **dokumentation.tex
 (D:\Users\Watnuss\Documents\GitHub\StreetSign-Evidence\docu\dokumentation.tex
@@ -952,11 +952,11 @@ Package rerunfilecheck Info: File `dokumentation.out' has not changed.
 (rerunfilecheck)             Checksum: 83B2D304149BE201EDA76448B3F1648D;340.
  ) 
 Here is how much of TeX's memory you used:
- 13453 strings out of 494045
- 205277 string characters out of 3145963
+ 13456 strings out of 494045
+ 205301 string characters out of 3145963
  361899 words of memory out of 3000000
  16384 multiletter control sequences out of 15000+200000
- 34390 words of font info for 106 fonts, out of 3000000 for 9000
+ 34549 words of font info for 108 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  40i,9n,59p,1324b,1179s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
@@ -965,7 +965,7 @@ x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/
 fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/urw/palatino/uplri8a.pfb>
-Output written on dokumentation.pdf (7 pages, 245094 bytes).
+Output written on dokumentation.pdf (7 pages, 246558 bytes).
 PDF statistics:
  111 PDF objects out of 1000 (max. 8388607)
  25 named destinations out of 1000 (max. 500000)
